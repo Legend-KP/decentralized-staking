@@ -1,23 +1,54 @@
-# dependencies
-node_modules
+# ---- Dependencies ----
+node_modules/
+**/node_modules/
 
-# yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# ---- Logs ----
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# eslint
-.eslintcache
+# ---- Environment ----
+.env
+.env.*
+!.env.example
+packages/**/.env
+packages/**/.env.*
 
-# misc
+# ---- Next.js (app in packages/nextjs) ----
+.next/
+packages/nextjs/.next/
+packages/nextjs/out/
+packages/nextjs/.vercel/
+
+# ---- Hardhat ----
+packages/hardhat/cache/
+packages/hardhat/artifacts/
+# keep deployments tracked
+!packages/hardhat/deployments/**
+
+# ---- Build outputs ----
+dist/
+**/dist/
+.turbo/
+
+# ---- Coverage ----
+coverage/
+.nyc_output/
+
+# ---- IDE / Editor ----
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# ---- OS files ----
 .DS_Store
+Thumbs.db
 
-# IDE
-.vscode
-.idea
+# ---- Misc ----
+.vercel/
+.ipynb_checkpoints
 
-# cli
-dist
